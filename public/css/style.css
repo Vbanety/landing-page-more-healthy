@@ -679,6 +679,10 @@ textarea {
     header ul, .header-right {
         display: none;
     }
+
+    section {
+        margin-bottom: 20rem;
+    }
     .menu-mobile {
         display: flex;
         width: 20%;
@@ -734,6 +738,33 @@ textarea {
     .undraw-note-mobile p {
         margin-bottom: 2rem;
     }
+
+    .introduction .intro-left, 
+    .introduction .doctor-polygon,
+    .draw-illustration,
+    .group-inputs input, textarea,
+    .info-services p {
+        width: 95%;
+    }
+
+
+
+    .group-inputs input, textarea {
+        margin: auto;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .f-height {
+        grid-template-columns: auto;
+        width: 95%;
+        height: auto;
+        gap: 2rem;
+        align-items: center;
+    }
+    
 }
 
 @media (max-width:600px) {
@@ -742,6 +773,25 @@ textarea {
 
 @media (max-width:480px) {
     /* smartphones, Android phones, landscape iPhone */
+    .introduction .google-play {
+        width: 95%;
+    }
+
+    .introduction {
+        margin-bottom:34rem !important;
+    }
+
+    .group-polygon {
+        top: 82%;
+    }
+
+    .draw-illustration img, .draw-illustration p {
+        width: 95%;
+    }
+
+    .group-steps h3 {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width:320px) {
