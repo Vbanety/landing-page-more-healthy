@@ -74,6 +74,10 @@ header ul li a:hover {
     cursor: pointer;
 }
 
+.menu-mobile {
+    display: none;
+}
+
 h1, h2, h3, h4 {
     color: var(--titles);
 }
@@ -87,7 +91,7 @@ section {
 .intro-left {    
     align-items: center;
     align-self: center;
-    width: 31rem;
+    width: 40%;
 }
 
 
@@ -395,6 +399,7 @@ section {
     outline-color: #7AC9FF;
 }
 
+
 form {
     display: flex;
     flex-direction: column;
@@ -532,13 +537,203 @@ textarea {
 
 @media (max-width:1150px) {
     /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+    header {
+        margin-bottom: 4rem;
+    }
+
+    .header-right {
+        padding-right: 0;
+        flex-direction: column;
+    }
+
+    .header-right button {
+        margin-bottom: .3rem;
+    }
+
     .introduction {
         flex-direction: column;
+        padding: 0;
+        margin-bottom: 50rem !important;
+    }
+
+    .introduction .intro-left, 
+    .introduction .doctor-polygon {
+        width: 70%;
+    }
+
+    .introduction div p {
+        margin-bottom: 1rem;
+    }
+
+    .introduction button {
+        margin: 0 !important;
+    }
+
+    .introduction .google-play {
+        position: relative;
+        top: 1.3rem;
+    }
+
+    .group-polygon {
+        position: absolute;
+        top: 100%;
+    }
+
+    .group-polygon,
+    .group-polygon::after,
+    .group-polygon::before {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        background-size: 100% 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .group-image div {
+        margin: auto !important;
+    }
+
+    .group-image,
+    .undraw-note-mobile {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .draw-illustration {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .draw-illustration img,
+    .draw-illustration p {
+        width: 70%;
+        margin: 1rem 0;
+    }
+
+    .step {
+        width: 33.3%;
+    }
+
+    .steps-wrap {
+        display: grid !important;
+        grid-template-columns: auto auto !important;
+        margin: auto;
+    }
+
+    form div {
+        grid-template-columns: auto auto;
+    }
+
+    .all-testimonials {
+        flex-direction: column;
+        width: 95%;
+        margin: auto;
+    }
+
+    .testimonials {
+        width: 100%;
+        margin: 1rem auto;
+    }
+
+    .testimonials-left {
+        left: 0;
+    }
+
+    form button {
+        width: 12rem;
+        height: 5rem; 
+    }
+
+    .f-height {
+        grid-template-columns: auto auto auto;
+        justify-content: space-between;
+        width: 90%;
+    }
+
+}
+
+@media (max-width:1040px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    .introduction {
+        margin-bottom: 45rem;
+    }
+
+    .intro-left {
+        /* margin-bottom: 3rem; */
+    }
+
+    .group-polygon {
+        top: 110%;
+    }
+
+    form div {
+        grid-template-columns: auto;
     }
 }
 
-@media (max-width:801px) {
+@media (max-width:768px) {
     /* tablet, landscape iPad, lo-res laptops ands desktops */
+    header ul, .header-right {
+        display: none;
+    }
+    .menu-mobile {
+        display: flex;
+        width: 20%;
+    }
+
+    .menu-mobile button {
+        width: 4rem;
+        height: 1rem;
+        background:rgba(0, 151, 255, 0.35);
+        border-radius: 1rem;
+        border: none;
+        position: relative;
+    }
+
+    .menu-mobile button::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1rem;
+        left: 0;
+        top: -1.5rem;
+        border-radius: 1rem;
+        background: inherit;
+    }
+
+    .menu-mobile button::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1rem;
+        border-radius: 1rem;
+        left: 0;
+        top: 1.5rem;
+        background: inherit;
+    }
+
+    .introduction {
+        margin-bottom: 44rem !important;
+    }
+    .group-polygon {
+        top: 115%;
+    }
+
+    .steps-wrap {
+        grid-template-columns: auto !important;
+    }
+
+    .undraw-note-mobile div,
+    .undraw-note-mobile img {
+        width: 95%;
+    }
+
+    .undraw-note-mobile p {
+        margin-bottom: 2rem;
+    }
 }
 
 @media (max-width:600px) {
